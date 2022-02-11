@@ -28,8 +28,8 @@ class RecipeTest {
 		recipe.addIngredient("Sal", 12);
 		
 		assertEquals(1, recipe.getIngredients().size());
-		assertEquals(recipe.getIngredients().get(0).getName(), "Sal");
-		assertEquals(recipe.getIngredients().get(0).getWeight(), 12);
+		assertEquals("Sal", recipe.getIngredients().get(0).getName());
+		assertEquals( 12, recipe.getIngredients().get(0).getWeight());
 	}
 	
 	@Test
@@ -39,9 +39,9 @@ class RecipeTest {
 		recipe.addIngredient("Pimienta", 6);
 		int ingredientsNum = recipe.getIngredients().size();
 		
-		assertEquals(ingredientsNum, 4);
-		assertEquals(recipe.getIngredients().get(ingredientsNum-1).getName(), "Pimienta");
-		assertEquals(recipe.getIngredients().get(ingredientsNum-1).getWeight(), 6);
+		assertEquals(4, ingredientsNum);
+		assertEquals("Pimienta", recipe.getIngredients().get(ingredientsNum-1).getName());
+		assertEquals(6, recipe.getIngredients().get(ingredientsNum-1).getWeight());
 	}
 	
 	@Test
@@ -51,9 +51,9 @@ class RecipeTest {
 		recipe.addIngredient("Ajo", 21);
 		int ingredientsNum = recipe.getIngredients().size();
 		
-		assertEquals(ingredientsNum, 3);
-		assertEquals(recipe.getIngredients().get(1).getName(), "Ajo");
-		assertEquals(recipe.getIngredients().get(1).getWeight(), 79);
+		assertEquals(3, ingredientsNum);
+		assertEquals("Ajo", recipe.getIngredients().get(1).getName());
+		assertEquals(79, recipe.getIngredients().get(1).getWeight());
 	}
 	
 	@Test
@@ -62,9 +62,9 @@ class RecipeTest {
 		
 		recipe.removeIngredient("Ajo");
 		
-		assertEquals(recipe.getIngredients().size(), 2);
-		assertEquals(recipe.getIngredients().get(0).getName(), "Cebolla");
-		assertEquals(recipe.getIngredients().get(1).getName(), "Arroz");
+		assertEquals(2, recipe.getIngredients().size());
+		assertEquals("Cebolla", recipe.getIngredients().get(0).getName());
+		assertEquals("Arroz", recipe.getIngredients().get(1).getName());
 	}
 
 }
